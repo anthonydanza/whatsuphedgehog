@@ -1,0 +1,21 @@
+application: APP_NAME
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /what
+  script: what.py
+  
+- url: /tellmemore
+  script: tellmemore.py
+  
+- url: /pin
+  script: receivedata.py
+
+- url: /hedgehog
+  static_dir: hedgehog
+
+- url: .*
+  script: main.py
